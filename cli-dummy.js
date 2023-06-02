@@ -13,17 +13,6 @@ const INSTRUCTION = {
     .reduce((acc, item) => ({ ...acc, ...{ [item[0]]: item[1] } }), {}), //?Cria um objeto de options { '--to': 'teste' }, e acessa o nome via Obj['--to']
 };
 
-// console.log(INSTRUCTION)
-// console.log(argv)
-console.log(
-  [["--to", "teste"]].reduce(
-    (acc, item) => ({ ...acc, ...{ [item[0]]: item[1] } }),
-    {}
-  )
-);
-console.log({ "--to": "teste" }["--to"]);
-// console.log(process.argv[1].slice(1))
-
 switch (INSTRUCTION.command) {
   case "help":
     help();
